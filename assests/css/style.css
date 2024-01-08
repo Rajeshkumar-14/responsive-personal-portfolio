@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+:root {
+    --bg-white: #fff;
+    --bg-dark: #333;
+    --text-white: #fff;
+    --text-dark: #333;
+    --primary-color: #ff7c2b;
+    --secondary-color: #947401;
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+}
+
+* {
+    font-family: var(--primary-font);
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.195), rgba(4, 7, 23, 0.205)), url("../images/Background/green-leafy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 3rem;
+}
+
+.navbar-brand:hover {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: var(--text-white) !important;
+}
+
+/* Custom nav pills */
+.custom-nav-pills .nav-link {
+    background-color: transparent !important;
+    margin-right: 10px;
+    padding: 0px 0px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+}
+
+.custom-nav-pills .nav-link.active,
+.custom-nav-pills .nav-link:hover {
+    color: var(--bg-white) !important;
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+/* Custom nav pills END */
+
+/* Social-Media Icon */
+.social-media .social-icon {
+    border: 2px solid var(--text-dark);
+    color: var(--text-dark);
+    padding: 8px;
+    text-align: center;
+    transition: all .3s ease;
+    border-radius: 50%;
+}
+
+/* Social-Media Icon END */
+
+/* Hover-Effects */
+.social-media .social-icon:hover {
+    border: 2px solid var(--primary-color);
+    color: var(--bg-white);
+    background: var(--primary-color);
+    transition: all .3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 4px 6px 0.5px var(--bg-dark) !important;
+    background: var(--primary-color) !important;
+    color: #fff;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 4px 6px 0.5px var(--bg-dark) !important;
+}
+
+.about-left-img:hover,
+.home-right-img:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 4px 6px 0.5px var(--bg-dark) !important;
+}
+
+/* Hover-Effects End */
+
+/* Education */
+.timeline {
+    padding-left: 3.5rem;
+}
+
+.timeline:before {
+    content: ' ';
+    background: var(--primary-color);
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    top: 10px;
+    border-radius: 1rem;
+}
+
+/* Timeline item circle marker */
+.timeline .timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    left: -46px;
+    width: 14px;
+    height: 14px;
+    z-index: 3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    top: 10px;
+}
+
+/* Education END */
+
+/* Contact */
+.contact-social-media .contact-social-icon {
+    border: 2px solid var(--primary-color);
+    color: var(--bg-dark);
+    padding: 8px;
+    text-align: center;
+    transition: all .3s ease;
+    border-radius: 50%;
+}
+
+.contact-social-media .contact-social-icon:hover {
+    border: 2px solid var(--primary-color);
+    color: var(--bg-white);
+    background: var(--primary-color);
+    transition: all .3s ease;
+}
+
+.contact-buttons a {
+    color: #333;
+}
+
+.contact-buttons button:hover a {
+    color: #fff !important;
+}
+
+/* Contact END */
