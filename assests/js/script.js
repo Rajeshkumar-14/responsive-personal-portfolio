@@ -1,10 +1,11 @@
 $(document).ready(function () {
     // NavBar Collapse at SM and MD
-    $('.navbar-nav .nav-link').on('click', function () {
+    $('.navbar-nav .nav-link, .dropdown-item').not('.dropdown-toggle').on('click', function () {
         if ($('.navbar-toggler').is(':visible')) {
             $('.navbar-collapse').collapse('hide');
         }
     });
+
     // Mail sending Function
     function sendmail() {
         var name = $("#name").val();

@@ -6,7 +6,7 @@
     --text-white: #fff;
     --text-dark: #333;
     --primary-color: #ff7c2b;
-    --secondary-color: #947401;
+    --secondary-color: #b16a00;
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 }
@@ -15,11 +15,20 @@
     font-family: var(--primary-font);
 }
 
-body {
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.195), rgba(4, 7, 23, 0.205)), url("../images/Background/green-leafy.jpg");
+.dark-theme {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.195), rgba(4, 7, 23, 0.205)), url("../images/Background/dark-green-leafy.jpg") !important;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.light-theme {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.195), rgba(4, 7, 23, 0.205)), url("../images/Background/green-leafy.jpg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    min-height: 100vh;
     scroll-behavior: smooth;
 }
 
@@ -31,6 +40,11 @@ section {
     background-color: var(--primary-color);
     border-radius: 10px;
     color: var(--text-white) !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: var(--primary-color) !important;
+    color: var(--bg-white) !important;
 }
 
 /* Custom nav pills */
@@ -51,25 +65,7 @@ section {
 
 /* Custom nav pills END */
 
-/* Social-Media Icon */
-.social-media .social-icon {
-    border: 2px solid var(--text-dark);
-    color: var(--text-dark);
-    padding: 8px;
-    text-align: center;
-    transition: all .3s ease;
-    border-radius: 50%;
-}
-
-/* Social-Media Icon END */
-
 /* Hover-Effects */
-.social-media .social-icon:hover {
-    border: 2px solid var(--primary-color);
-    color: var(--bg-white);
-    background: var(--primary-color);
-    transition: all .3s ease;
-}
 
 .skill-card:hover {
     transform: scale(1.01);
@@ -93,6 +89,13 @@ section {
 }
 
 /* Hover-Effects End */
+
+/* Project End */
+.project-card {
+    min-height: 475px !important;
+}
+
+/* Project End */
 
 /* Education */
 .timeline {
@@ -130,28 +133,61 @@ section {
 /* Education END */
 
 /* Contact */
-.contact-social-media .contact-social-icon {
+/* Common styles for social media icons in both themes */
+.contact-social-media .contact-social-icon,
+.social-media .social-icon {
     border: 2px solid var(--primary-color);
-    color: var(--bg-dark);
     padding: 8px;
     text-align: center;
     transition: all .3s ease;
     border-radius: 50%;
 }
 
-.contact-social-media .contact-social-icon:hover {
-    border: 2px solid var(--primary-color);
-    color: var(--bg-white);
+/* Dark theme social icon styles */
+.dark-theme .contact-social-media .contact-social-icon,
+.dark-theme .social-media .social-icon {
+    color: var(--text-white);
+    border-color: var(--text-dark);
+}
+
+.dark-theme .contact-social-media .contact-social-icon:hover,
+.dark-theme .social-media .social-icon:hover {
+    color: var(--text-dark);
     background: var(--primary-color);
-    transition: all .3s ease;
 }
 
+/* Light theme social icon styles */
+.light-theme .contact-social-media .contact-social-icon,
+.light-theme .social-media .social-icon {
+    color: var(--text-dark);
+    border-color: var(--primary-color);
+}
+
+.light-theme .contact-social-media .contact-social-icon:hover,
+.light-theme .social-media .social-icon:hover {
+    color: var(--text-white);
+    background: var(--primary-color);
+}
+
+/* Common styles for contact buttons in both themes */
 .contact-buttons a {
-    color: #333;
+    color: var(--text-dark);
 }
 
-.contact-buttons button:hover a {
-    color: #fff !important;
+/* Common styles for contact buttons in both themes */
+.contact-buttons a {
+    color: var(--text-dark);
 }
+
+/* Dark theme contact buttons */
+.dark-theme .contact-buttons a {
+    color: var(--text-white);
+}
+
+/* Light theme contact buttons */
+.light-theme .contact-buttons a {
+    color: var(--text-dark);
+}
+
 
 /* Contact END */

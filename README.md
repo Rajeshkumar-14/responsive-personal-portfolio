@@ -9,6 +9,7 @@ This project is a responsive personal portfolio website aimed at showcasing the 
 - Downloadable resume for users to access the developer's credentials.
 - SMTP mailing facility for visitors to easily get in touch.
 - Smooth reveal animations using AOS (Animate On Scroll) library.
+- Theme-changing functionality to switch between light and dark themes.
 
 ## Technologies Used
 
@@ -35,6 +36,7 @@ This project is a responsive personal portfolio website aimed at showcasing the 
 - Navigate through the different sections using the navigation menu.
 - Download the resume by clicking the provided link.
 - Use the contact form or provided details to get in touch via email.
+- Use the theme toggle in the navigation menu to switch between light and dark themes.
 
 ## Contributing
 
